@@ -1,0 +1,33 @@
+{
+  "name": "state-machine",
+  "version": "1.0.0",
+  "description": "State machine for processing streams of data",
+  "main": "lib/state-machine.js",
+  "scripts": {
+    "eslint": "eslint lib/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michal Blaha <misablaha@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "devDependencies": {
+    "eslint": "^3.14.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichalB/state-machine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MichalB/state-machine/issues"
+  },
+  "homepage": "https://github.com/MichalB/state-machine#readme"
+}
