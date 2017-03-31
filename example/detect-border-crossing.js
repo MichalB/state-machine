@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 const StateMachine = require('..')
 
 const sm = new StateMachine({
@@ -14,20 +16,20 @@ const sm = new StateMachine({
   initialState: 'inCountry',
   states: {
     inCountry: {
-      onEnter(client, state) {},
-      onExit(client, state) {},
-    },
+      onEnter (client, state) {},
+      onExit (client, state) {}
+    }
   },
   transitions: [
     {
       input: 'borderCrossing',
       from: 'inCountry',
-      to: 'waitingForConfirmation',
+      to: 'waitingForConfirmation'
     },
     {
       input: 'borderCrossing',
       from: 'waitingForConfirmation',
-      to: 'inCountry',
+      to: 'inCountry'
     },
     {
       input: 'onTime',
@@ -35,8 +37,8 @@ const sm = new StateMachine({
       to: 'inCountry',
       condition: (client, state) => state.duration > 30,
       onTransition: (client, from, to) => console.log('Border crossed.', from)
-    },
-  ],
+    }
+  ]
 })
 
 let vehicle = { id: 1234 }
@@ -68,7 +70,7 @@ let tasks = [
   { id: id++, country: 'DE', timestamp: now += 10 },
   { id: id++, country: 'DE', timestamp: now += 10 },
   { id: id++, country: 'CZ', timestamp: now += 10 },
-  { id: id++, country: 'CZ', timestamp: now += 10 },
+  { id: id++, country: 'CZ', timestamp: now += 10 }
 ]
 
 tasks.forEach(function (task) {
@@ -78,4 +80,3 @@ tasks.forEach(function (task) {
 // setTimeout(() => {
 //   console.log(JSON.stringify(vehicle))
 // }, 1000)
-

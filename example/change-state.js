@@ -1,22 +1,30 @@
+/* eslint-disable no-console */
+
 const StateMachine = require('..')
 
 const sm = new StateMachine({
-  getEvent: (input => input.value),
-  getTimestamp: (input => input.timestamp),
+  getEvent: input => input.value,
+  getTimestamp: input => input.timestamp,
   initial: 'off',
   transitions: [
     {
-      input: 0, from: 'on', to: 'off',
+      input: 0,
+      from: 'on',
+      to: 'off',
       onTransition: (from, to, stateMachine) => console.log('switch off', to)
     },
     {
-      input: 1, from: 'off', to: 'on',
+      input: 1,
+      from: 'off',
+      to: 'on',
       onTransition: (from, to, stateMachine) => console.log('switch on', to)
     },
     {
-      input: 2, from: 'on', to: 'off',
+      input: 2,
+      from: 'on',
+      to: 'off',
       onTransition: (from, to, stateMachine) => console.log('switch off', to)
-    },
+    }
   ]
 })
 
@@ -33,7 +41,7 @@ let tasks = [
   { value: 2, timestamp: now + 70 },
   { value: 2, timestamp: now + 80 },
   { value: 1, timestamp: now + 90 },
-  { value: 1, timestamp: now + 100 },
+  { value: 1, timestamp: now + 100 }
 ]
 
 let sequence = Promise.resolve()
