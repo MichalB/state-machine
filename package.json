@@ -1,6 +1,6 @@
 {
   "name": "state-machine",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "State machine for processing streams of data",
   "main": "lib/state-machine.js",
   "scripts": {
